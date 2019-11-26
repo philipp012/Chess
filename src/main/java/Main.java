@@ -6,5 +6,6 @@ public class Main {
     private static void play() {
         Board board = new Board();
         board.setUp();
+        board.printBoard();
     }
 }
