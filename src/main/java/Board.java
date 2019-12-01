@@ -72,4 +72,12 @@ class Board {
         }
         System.out.print("\n\n");
     }
+
+    public Piece[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(Piece[][] board) {
+        this.board = board;
+    }
 }

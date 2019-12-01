@@ -24,7 +24,7 @@ public class Main {
                 player1.setColor(COLOR.BLACK);
                 player2.setColor(COLOR.WHITE);
             } else {
-                System.out.println("Please pick a w or b");
+                System.out.println("Please pick w or b");
             }
         }
 
@@ -36,10 +36,17 @@ public class Main {
         int moves = 0;
         while (true) {
             if (player1.getColor().equals(COLOR.WHITE)) {
-                player1.getMove();
+                int[] from = player1.getMove()[0];
+                int[] to = player1.getMove()[1];
+
+                // check if from field is white and to field isn't
+                if (board.getBoard()[from[0]][from[1]].getColor().equals(player1.getColor()) && !board.getBoard()[to[0]][to[1]].getColor().equals(player1.getColor())) {
+                    board.getBoard()[from[0]][from[1]].move(to);
+                }
             } else {
             }
         }
     }
+
 
 }

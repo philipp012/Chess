@@ -7,4 +7,9 @@ public class Rook extends Piece {
         this.setSymbol(symbol);
         this.setColor(color);
     }
+
+    @Override
+    public void move(int[][] to) {
+        if
+    }
 }

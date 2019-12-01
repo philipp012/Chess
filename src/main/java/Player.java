@@ -21,19 +21,18 @@ public class Player {
         return name;
     }
 
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public String getInput() {
+    String getInput() {
         String input =  scanner.nextLine();
         scanner.close();
         return input;
     }
 
-    public int[][] getMove() {
+    int[][] getMove() {
         boolean valid = false;
-        int[][] move = new int[1][1];
         int[] from = new int[2];
         int[] to = new int[2];
         while (!valid) {
@@ -49,7 +48,7 @@ public class Player {
                 System.out.println("Invalid input");
             }
         }
-        
+        return new int[][]{from, to};
     }
 
     private boolean checkInputValidity(String input) {

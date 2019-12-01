@@ -21,4 +21,8 @@ public abstract class Piece {
     public void setColor(COLOR color) {
         this.color = color;
     }
+
+    public void move(int[][] to) {
+
+    }
 }
