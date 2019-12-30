@@ -1,13 +1,14 @@
 import Enums.COLOR;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Player {
     private COLOR color;
-    private String name;
     private static final Scanner scanner = new Scanner(System.in);
-    private static final char LETTERS[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',};
+    private static final char[] LETTERS = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
 
     public COLOR getColor() {
         return color;
@@ -17,33 +18,36 @@ public class Player {
         this.color = color;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    void setName(String name) {
-        this.name = name;
-    }
-
     String getInput() {
         String input =  scanner.nextLine();
-        scanner.close();
         return input;
     }
 
     int[][] getMove() {
+        /*
+        * Get int matrix as follows
+        * move[[xfrom][yfrom]][[xto][yto]]
+        */
+
         boolean valid = false;
         int[] from = new int[2];
         int[] to = new int[2];
+
         while (!valid) {
             System.out.print(this.color + "'s turn: ");
-            String input = getInput();
+            String input = getInput().toUpperCase();
             if (checkInputValidity(input)) {
                 valid = true;
-                from[0] = input.charAt(0);
-                from[1] = input.charAt(1);
-                to[0] = input.charAt(3);
-                to[1] = input.charAt(4);
+                for (int i = 0; i < LETTERS.length; i++) {
+                    if (LETTERS[i] == input.charAt(0)) {
+                        from[0] = i;
+                    }
+                    if (LETTERS[i] == input.charAt(3)) {
+                        to[0] = i;
+                    }
+                }
+                from[1] = Character.getNumericValue(input.charAt(1)) -1;
+                to[1] = Character.getNumericValue(input.charAt(4)) -1;
             } else {
                 System.out.println("Invalid input");
             }
@@ -77,11 +81,7 @@ public class Player {
         }
         int intFrom = Integer.parseInt(String.valueOf(input.charAt(1)));
         int intTo = Integer.parseInt(String.valueOf(input.charAt(4)));
-        if (0 > intFrom || intFrom > 9 | 0 > intTo || intTo > 9) {
-            return false;
-        }
-
-        return true;
+        return 0 <= intFrom && !(intFrom > 9 | 0 > intTo) && intTo <= 9;
     }
 
 

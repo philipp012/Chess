@@ -1,5 +1,3 @@
-package Pieces;
-
 import Enums.COLOR;
 
 public class Knight extends Piece {

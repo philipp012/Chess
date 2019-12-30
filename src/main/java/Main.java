@@ -11,42 +11,31 @@ public class Main {
 
         Player player1 = new Player();
         Player player2 = new Player();
-
-        System.out.print("Name of Player 1: ");
-        player1.setName(player1.getInput());
-        while (player1.getColor() == null) {
-            String color = player1.getInput().trim().toLowerCase();
-            System.out.print("Do you want to play as white or as black <w/b> ");
-            if (color.equals("w")) {
-                player1.setColor(COLOR.WHITE);
-                player2.setColor(COLOR.BLACK);
-            } else if (color.equals("b")) {
-                player1.setColor(COLOR.BLACK);
-                player2.setColor(COLOR.WHITE);
-            } else {
-                System.out.println("Please pick w or b");
-            }
-        }
-
-        System.out.print("Name of Player 2: ");
-        player2.setName(player2.getInput());
+        player1.setColor(COLOR.WHITE);
+        player2.setColor(COLOR.BLACK);
 
         Board board = new Board();
         board.setUp();
         int moves = 0;
+        // game loop
         while (true) {
-            if (player1.getColor().equals(COLOR.WHITE)) {
-                int[] from = player1.getMove()[0];
-                int[] to = player1.getMove()[1];
+            board.printBoard();
+            // Whites turn
+            int[][] move = player1.getMove();
+            int xfrom = move[0][0];
+            int yfrom = move[0][1];
+            int xto = move[1][0];
+            int yto = move[1][1];
+            
 
-                // check if from field is white and to field isn't
-                if (board.getBoard()[from[0]][from[1]].getColor().equals(player1.getColor()) && !board.getBoard()[to[0]][to[1]].getColor().equals(player1.getColor())) {
-                    board.getBoard()[from[0]][from[1]].move(to);
+            // check if from field is white and to field isn't
+            if (board.getBoard()[xfrom][yfrom].getColor().equals(COLOR.WHITE)) {
+                if (!board.getBoard()[xto][yto].getColor().equals(COLOR.WHITE)) {
+                    board.setBoard(board.getBoard()[xfrom][xto].move(move, board));
                 }
-            } else {
             }
+
+            // Blacks turn
         }
     }
-
-
 }

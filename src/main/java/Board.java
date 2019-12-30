@@ -1,5 +1,4 @@
 import Enums.COLOR;
-import Pieces.*;
 
 class Board {
     private static final int NUMBERS[] = {1,2,3,4,5,6,7,8};

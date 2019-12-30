@@ -1,5 +1,3 @@
-package Pieces;
-
 import Enums.COLOR;
 
 public abstract class Piece {
@@ -22,7 +20,7 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public void move(int[][] to) {
-
+    public Piece[][] move(int[][] move, Board board) {
+        return null;
     }
 }
