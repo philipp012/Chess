@@ -1,8 +1,6 @@
 import Enums.COLOR;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Player {
@@ -46,13 +44,35 @@ public class Player {
                         to[0] = i;
                     }
                 }
-                from[1] = Character.getNumericValue(input.charAt(1)) -1;
-                to[1] = Character.getNumericValue(input.charAt(4)) -1;
+                from[1] = movementCorrector(Character.getNumericValue(input.charAt(1)) -1);
+                to[1] = movementCorrector(Character.getNumericValue(input.charAt(4)) -1);
             } else {
                 System.out.println("Invalid input");
             }
         }
         return new int[][]{from, to};
+    }
+
+    private int movementCorrector(int input) {
+        switch (input) {
+            case 0:
+                return 7;
+            case 1:
+                return 6;
+            case 2:
+                return 5;
+            case 3:
+                return 4;
+            case 4:
+                return 3;
+            case 5:
+                return 2;
+            case 6:
+                return 1;
+            case 7:
+                return 0;
+        }
+        throw new InputMismatchException();
     }
 
     private boolean checkInputValidity(String input) {

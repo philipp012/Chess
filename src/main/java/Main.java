@@ -29,9 +29,9 @@ public class Main {
             
 
             // check if from field is white and to field isn't
-            if (board.getBoard()[xfrom][yfrom].getColor().equals(COLOR.WHITE)) {
-                if (!board.getBoard()[xto][yto].getColor().equals(COLOR.WHITE)) {
-                    board.setBoard(board.getBoard()[xfrom][xto].move(move, board));
+            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
+                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
+                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
                 }
             }
 
