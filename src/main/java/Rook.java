@@ -12,38 +12,42 @@ public class Rook extends Piece {
         int yfrom = move[0][1];
         int xto = move[1][0];
         int yto = move[1][1];
+
         // vertical
-        if (xfrom == xto) {
+        if (xfrom == xto && yfrom != yto) {
             int counter = yfrom;
             // up
-            if (yfrom < yto) {
-                while (counter != yto - 1) {
+            if (yfrom > yto) {
+                counter--;
+                while (counter > yto + 1) {
                     // check if field is free
-                    if (!board.getBoard()[xfrom][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
-                    }
-                    counter++;
-                }
-            }
-            // down
-            else {
-                while (counter != yto + 1) {
-                    // check if field is free
-                    if (!board.getBoard()[xfrom][counter].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter--;
                 }
             }
+            // down
+            else {
+                counter++;
+                while (counter < yto - 1) {
+                    // check if field is free
+                    if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
+                        return board.getBoard();
+                    }
+                    counter++;
+                }
+            }
         }
         // horizontal
-        else if (yfrom == yto) {
+        else if (yfrom == yto && xfrom != xto) {
             int counter = xfrom;
             //right
             if (xfrom < xto) {
-                while (counter != xto - 1) {
+                counter++;
+                while (counter < xto - 1) {
                     // check if field is free
-                    if (!board.getBoard()[counter][yfrom].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter++;
@@ -51,9 +55,10 @@ public class Rook extends Piece {
             }
             // left
             else {
-                while (counter != xto + 1) {
+                counter--;
+                while (counter > xto + 1) {
                     // check if field is free
-                    if (!board.getBoard()[counter][yfrom].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter--;
@@ -62,8 +67,8 @@ public class Rook extends Piece {
         }
 
         // execute move
-        board.getBoard()[xto][yto] = this;
-        board.getBoard()[xfrom][yfrom] = new BlankSquare();
+        board.getBoard()[yto][xto] = this;
+        board.getBoard()[yfrom][xfrom] = new BlankSquare();
         return board.getBoard();
     }
 }

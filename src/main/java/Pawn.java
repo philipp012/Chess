@@ -18,30 +18,30 @@ public class Pawn extends Piece {
         // check move validity
         if (abs(yto - yfrom) <= 2 && abs(xfrom - xto) <= 1) {
             // upwards
-            if (yfrom < yto) {
+            if (yfrom > yto && this.getColor().equals(COLOR.WHITE)) {
                 // 1 step forward
-                if (yto - yfrom == 1 && board.getBoard()[xto][yto].getColor().equals(COLOR.NONE)) {
+                if (yfrom - yto == 1 && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                     board.getBoard()[yto][xto] = this;
                     board.getBoard()[yfrom][xfrom] = new BlankSquare();
                     return board.getBoard();
                 }
                 // 2 steps forward
-                if (this.getColor().equals(COLOR.WHITE) && yfrom == 1 && board.getBoard()[xto][yto - 1].getColor().equals(COLOR.NONE) && board.getBoard()[xto][yto].getColor().equals(COLOR.NONE)) {
+                if (this.getColor().equals(COLOR.WHITE) && yfrom == 6 && board.getBoard()[yto + 1][xto].getColor().equals(COLOR.NONE) && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                     board.getBoard()[yto][xto] = this;
                     board.getBoard()[yfrom][xfrom] = new BlankSquare();
                     return board.getBoard();
                 }
             }
             // downwards
-            else {
+            else if (yto > yfrom && this.getColor().equals(COLOR.BLACK)){
                 // 1 step forward
-                if (yto + yfrom == 1 && board.getBoard()[xto][yto].getColor().equals(COLOR.NONE)) {
+                if (yto - yfrom == 1 && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                     board.getBoard()[yto][xto] = this;
                     board.getBoard()[yfrom][xfrom] = new BlankSquare();
                     return board.getBoard();
                 }
                 // 2 steps forward
-                if (this.getColor().equals(COLOR.WHITE) && yfrom == 6 && board.getBoard()[xto][yto - 1].getColor().equals(COLOR.NONE) && board.getBoard()[xto][yto].getColor().equals(COLOR.NONE)) {
+                if (yfrom == 1 && board.getBoard()[yto -1][xto].getColor().equals(COLOR.NONE) && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                     board.getBoard()[yto][xto] = this;
                     board.getBoard()[yfrom][xfrom] = new BlankSquare();
                     return board.getBoard();
@@ -49,12 +49,14 @@ public class Pawn extends Piece {
             }
 
             // beating
-            if (!board.getBoard()[xto][yto].getColor().equals(this.getColor()) && board.getBoard()[xto][yto].getColor().equals(COLOR.NONE)) {
+            if (!board.getBoard()[yto][xto].getColor().equals(this.getColor()) && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                 board.getBoard()[yto][xto] = this;
                 board.getBoard()[yfrom][xfrom] = new BlankSquare();
                 return board.getBoard();
             }
+
+
         }
-        return null;
+        return board.getBoard();
     }
 }

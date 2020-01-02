@@ -17,15 +17,20 @@ public class Main {
         Board board = new Board();
         board.setUp();
         int moves = 0;
+        int[][] move;
+        int xfrom;
+        int yfrom;
+        int xto;
+        int yto;
         // game loop
         while (true) {
             board.printBoard();
             // Whites turn
-            int[][] move = player1.getMove();
-            int xfrom = move[0][0];
-            int yfrom = move[0][1];
-            int xto = move[1][0];
-            int yto = move[1][1];
+            move =  player1.getMove();
+            xfrom = move[0][0];
+            yfrom = move[0][1];
+            xto = move[1][0];
+            yto = move[1][1];
             
 
             // check if from field is white and to field isn't
@@ -34,8 +39,28 @@ public class Main {
                     board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
                 }
             }
+            moves++;
+
+            System.out.println("Moves: " + moves);
+            board.printBoardReversed();
+
 
             // Blacks turn
+            move = player2.getMove();
+            xfrom = move[0][0];
+            yfrom = move[0][1];
+            xto = move[1][0];
+            yto = move[1][1];
+
+
+            // check if from field is black and to field isn't
+            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
+                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
+                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+                }
+            }
+            moves++;
+            System.out.println("Moves: " + moves);
         }
     }
 }
