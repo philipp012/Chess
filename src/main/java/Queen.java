@@ -26,7 +26,7 @@ public class Queen extends Piece {
                     while (counter > yto + 1) {
                         // check if field is free
                         if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
-                            return board.getBoard();
+                            return null;
                         }
                         counter--;
                     }
@@ -37,7 +37,7 @@ public class Queen extends Piece {
                     while (counter < yto - 1) {
                         // check if field is free
                         if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
-                            return board.getBoard();
+                            return null;
                         }
                         counter++;
                     }
@@ -52,7 +52,7 @@ public class Queen extends Piece {
                     while (counter < xto - 1) {
                         // check if field is free
                         if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
-                            return board.getBoard();
+                            return null;
                         }
                         counter++;
                     }
@@ -63,7 +63,7 @@ public class Queen extends Piece {
                     while (counter > xto + 1) {
                         // check if field is free
                         if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
-                            return board.getBoard();
+                            return null;
                         }
                         counter--;
                     }
@@ -78,7 +78,7 @@ public class Queen extends Piece {
                 while (counter > yto + 1) {
                     // check if lane is free
                     if (!board.getBoard()[xfrom - 1][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return null;
                     }
                     counter--;
                 }
@@ -90,7 +90,7 @@ public class Queen extends Piece {
                 while (counter > yto + 1) {
                     // check if lane is free
                     if (!board.getBoard()[xfrom + 1][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return null;
                     }
                     counter--;
                 }
@@ -102,7 +102,7 @@ public class Queen extends Piece {
                 while (counter < yto - 1) {
                     // check if lane is free
                     if (!board.getBoard()[xfrom - 1][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return null;
                     }
                     counter++;
                 }
@@ -113,7 +113,7 @@ public class Queen extends Piece {
                 while (counter < yto - 1) {
                     // check if lane is free
                     if (!board.getBoard()[xfrom + 1][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return null;
                     }
                     counter++;
                 }

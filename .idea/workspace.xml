@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81941cbb-683d-4c06-a7c0-ca74308f744f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/5ia17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/King.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Knight.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Queen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Rook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bishop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bishop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/King.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/King.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Knight.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Knight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Projects.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Piece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Piece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Queen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Queen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Rook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Rook.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,118 +31,8 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-              <folding>
-                <element signature="e#84#85#0" expanded="true" />
-                <element signature="e#106#107#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Enums/COLOR.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2328">
-              <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Bishop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="70" column="32" selection-start-line="19" selection-start-column="12" selection-end-line="70" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Queen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/King.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="15" column="29" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Knight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" selection-start-line="4" selection-end-line="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Rook.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="66" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1608">
-              <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FavoritesManager">
+    <favorites_list name="Chess" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,21 +45,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Bishop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Rook.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Queen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/King.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Knight.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Board.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Pawn.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -181,52 +53,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="786" />
-    <option name="y" value="297" />
-    <option name="width" value="1099" />
-    <option name="height" value="1460" />
+    <option name="x" value="583" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectId" id="1UFrpGwQUgt2itEAV5BYDlJ65SO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chess" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chess" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -234,6 +67,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -244,26 +78,14 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Projects" />
+      <module name="Chess" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -307,80 +129,20 @@
       <workItem from="1577628532961" duration="2118000" />
       <workItem from="1577692083687" duration="1983000" />
       <workItem from="1577694095578" duration="251000" />
-      <workItem from="1577802882794" duration="4183000" />
-      <workItem from="1577816998227" duration="883000" />
-      <workItem from="1577876679783" duration="5002000" />
-      <workItem from="1577964735359" duration="600000" />
+      <workItem from="1577736718421" duration="642000" />
+      <workItem from="1577797093980" duration="1240000" />
+      <workItem from="1578314825653" duration="50000" />
+      <workItem from="1578321955219" duration="3422000" />
+      <workItem from="1578388285191" duration="316000" />
+      <workItem from="1578921424263" duration="21000" />
+      <workItem from="1579273795298" duration="965000" />
+      <workItem from="1579423717363" duration="1040000" />
+      <workItem from="1579530482304" duration="2391000" />
+      <workItem from="1579534429496" duration="143000" />
+      <workItem from="1579615719000" duration="16000" />
+      <workItem from="1579682735745" duration="109000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18958000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07790143" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5601626" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5593496" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3284553" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32520324" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3298887" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Designer" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.3292683" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -391,12 +153,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -423,10 +179,10 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="935" y="350" width="707" height="771" key="#Main/0.25.2560.1415@0.25.2560.1415" timestamp="1577475420663" />
-    <state x="738" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577475517243">
+    <state x="738" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577736752036">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="738" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577475517243" />
+    <state x="738" y="390" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577736752036" />
     <state x="1088" y="438" width="374" height="595" key="#com.intellij.ide.util.MemberChooser" timestamp="1577544631204">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -435,53 +191,75 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="1012" y="516" width="525" height="437" key="#com.intellij.ide.util.TreeClassChooserDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577475492222" />
-    <state x="1121" y="624" width="307" height="222" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577378930249">
+    <state x="841" y="472" width="307" height="166" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578322439645">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="841" y="472" width="307" height="166" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1578322439645" />
+    <state x="1121" y="624" width="307" height="222" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577736722934" />
+    <state x="643" y="276" width="624" height="559" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579273863321">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="643" y="276" width="624" height="559" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1579273863321" />
+    <state x="1038" y="346" key="#xdebugger.evaluate" timestamp="1577802316444">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="1121" y="624" width="307" height="222" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577378930249" />
+    <state x="1038" y="346" key="#xdebugger.evaluate/0.25.2560.1415@0.25.2560.1415" timestamp="1577802316444" />
     <state x="99" y="126" width="2360" height="1215" key="DiffContextDialog" timestamp="1577445944894">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="99" y="126" width="2360" height="1215" key="DiffContextDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577445944894" />
-    <state width="1255" height="466" key="GridCell.Tab.0.bottom" timestamp="1577694357171">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state x="743" y="310" width="424" height="490" key="FileChooserDialogImpl" timestamp="1578314861138">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1255" height="466" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1577694357171" />
-    <state width="1255" height="466" key="GridCell.Tab.0.center" timestamp="1577694357170">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state x="743" y="310" width="424" height="490" key="FileChooserDialogImpl/0.25.1920.1055@0.25.1920.1055" timestamp="1578314861138" />
+    <state width="1350" height="280" key="GridCell.Tab.0.bottom" timestamp="1579682843818">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1255" height="466" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1577694357170" />
-    <state width="1255" height="466" key="GridCell.Tab.0.left" timestamp="1577694357169">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.0.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843818" />
+    <state width="2510" height="525" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746976" />
+    <state width="1350" height="280" key="GridCell.Tab.0.center" timestamp="1579682843817">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1255" height="466" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1577694357169" />
-    <state width="1255" height="466" key="GridCell.Tab.0.right" timestamp="1577694357171">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.0.center/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843817" />
+    <state width="2510" height="525" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746975" />
+    <state width="1350" height="280" key="GridCell.Tab.0.left" timestamp="1579682843816">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1255" height="466" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1577694357171" />
-    <state width="2510" height="1089" key="GridCell.Tab.1.bottom" timestamp="1577693744080">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.0.left/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843816" />
+    <state width="2510" height="525" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746975" />
+    <state width="1350" height="280" key="GridCell.Tab.0.right" timestamp="1579682843817">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1350" height="280" key="GridCell.Tab.0.right/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843817" />
+    <state width="2510" height="525" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746976" />
+    <state width="1350" height="280" key="GridCell.Tab.1.bottom" timestamp="1579682843821">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state width="1350" height="280" key="GridCell.Tab.1.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843821" />
     <state width="2510" height="1089" key="GridCell.Tab.1.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1577693744080" />
-    <state width="2510" height="1089" key="GridCell.Tab.1.center" timestamp="1577693744079">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.1.center" timestamp="1579682843819">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1350" height="280" key="GridCell.Tab.1.center/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843819" />
     <state width="2510" height="1089" key="GridCell.Tab.1.center/0.25.2560.1415@0.25.2560.1415" timestamp="1577693744079" />
-    <state width="2510" height="1089" key="GridCell.Tab.1.left" timestamp="1577693744079">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.1.left" timestamp="1579682843819">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1350" height="280" key="GridCell.Tab.1.left/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843819" />
     <state width="2510" height="1089" key="GridCell.Tab.1.left/0.25.2560.1415@0.25.2560.1415" timestamp="1577693744079" />
-    <state width="2510" height="1089" key="GridCell.Tab.1.right" timestamp="1577693744079">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state width="1350" height="280" key="GridCell.Tab.1.right" timestamp="1579682843821">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state width="1350" height="280" key="GridCell.Tab.1.right/0.25.1920.1055@0.25.1920.1055" timestamp="1579682843820" />
     <state width="2510" height="1089" key="GridCell.Tab.1.right/0.25.2560.1415@0.25.2560.1415" timestamp="1577693744079" />
-    <state x="761" y="367" width="1037" height="865" key="SettingsEditor" timestamp="1577692875907">
+    <state x="761" y="367" width="1037" height="865" key="SettingsEditor" timestamp="1577802512540">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="761" y="367" width="1037" height="865" key="SettingsEditor/0.25.2560.1415@0.25.2560.1415" timestamp="1577692875907" />
-    <state x="930" y="560" key="com.intellij.ide.util.TipDialog" timestamp="1577378924504">
-      <screen x="0" y="25" width="2560" height="1415" />
+    <state x="761" y="367" width="1037" height="865" key="SettingsEditor/0.25.2560.1415@0.25.2560.1415" timestamp="1577802512540" />
+    <state x="698" y="424" key="com.intellij.ide.util.TipDialog" timestamp="1579682737378">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
+    <state x="698" y="424" key="com.intellij.ide.util.TipDialog/0.25.1920.1055@0.25.1920.1055" timestamp="1579682737378" />
     <state x="930" y="560" key="com.intellij.ide.util.TipDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1577378924504" />
     <state x="815" y="389" width="920" height="692" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1577694345449">
       <screen x="0" y="25" width="2560" height="1415" />
@@ -492,111 +270,23 @@
     </state>
     <state x="943" y="347" width="672" height="678" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1577692502820" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Bishop.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Chess$Main.ic" NAME="Main Coverage Results" MODIFIED="1577695073723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Piece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Projects.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="56" column="69" selection-start-line="56" selection-start-column="69" selection-end-line="56" selection-end-column="69" />
-          <folding>
-            <element signature="e#84#85#0" expanded="true" />
-            <element signature="e#106#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Enums/COLOR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2328">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Bishop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="70" column="32" selection-start-line="19" selection-start-column="12" selection-end-line="70" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Queen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/King.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" column="29" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Knight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" selection-start-line="4" selection-end-line="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Rook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="66" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1608">
-          <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

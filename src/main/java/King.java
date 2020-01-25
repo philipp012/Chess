@@ -19,8 +19,11 @@ public class King extends Piece {
         if (abs(xfrom - xto) == 1 && abs(yfrom - yto) == 1 || abs(xfrom - xto) == 0 && abs(yfrom - yto) == 1 || abs(xfrom - xto) == 1 && abs(yfrom - yto) == 0) {
             board.getBoard()[yto][xto] = this;
             board.getBoard()[yfrom][xfrom] = new BlankSquare();
+            return board.getBoard();
         }
 
-        return board.getBoard();
+
+        // error
+        return null;
     }
 }

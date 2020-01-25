@@ -57,6 +57,7 @@ public class Pawn extends Piece {
 
 
         }
-        return board.getBoard();
+        // error
+        return null;
     }
 }

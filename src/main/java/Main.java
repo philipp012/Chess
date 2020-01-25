@@ -1,6 +1,7 @@
 import Enums.COLOR;
 
 public class Main {
+
     public static void main(String[] args) {
         play();
     }
@@ -31,18 +32,35 @@ public class Main {
             yfrom = move[0][1];
             xto = move[1][0];
             yto = move[1][1];
+            boolean checker = false;
             
 
-            // check if from field is white and to field isn't
-            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
-                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
-                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+            while (!checker) {
+                // check if from field is white and to field isn't
+                if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
+                    if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
+                        if (board.getBoard() == board.getBoard()[yfrom][xfrom].move(move, board)) {
+                            checker = true;
+
+                        } else {
+                            System.out.println("invalid move");
+
+                            move =  player1.getMove();
+                            xfrom = move[0][0];
+                            yfrom = move[0][1];
+                            xto = move[1][0];
+                            yto = move[1][1];
+                        }
+                    }
                 }
             }
+            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
             moves++;
 
+            checkCheck(COLOR.BLACK, board);
+
             System.out.println("Moves: " + moves);
-            board.printBoardReversed();
+            board.printBoard();
 
 
             // Blacks turn
@@ -52,15 +70,66 @@ public class Main {
             xto = move[1][0];
             yto = move[1][1];
 
+            checker = false;
 
-            // check if from field is black and to field isn't
-            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
-                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
-                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+
+            while (!checker) {
+                // check if from field is white and to field isn't
+                if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
+                    if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
+                        if (board.getBoard() == board.getBoard()[yfrom][xfrom].move(move, board)) {
+                            checker = true;
+
+                        } else {
+                            System.out.println("invalid move");
+
+                            move =  player2.getMove();
+                            xfrom = move[0][0];
+                            yfrom = move[0][1];
+                            xto = move[1][0];
+                            yto = move[1][1];
+                        }
+                    }
                 }
             }
+            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
             moves++;
             System.out.println("Moves: " + moves);
         }
+    }
+
+    private static void checkCheck(COLOR color, Board board) {
+            for (int i = 0; i < 8; i++) {
+                for (int j = 0; j < 8; j++) {
+                    // check if field contains king-object of the targeted color
+                    if (board.getBoard()[i][j].getSymbol().equals('\u265A') | board.getBoard()[i][j].getSymbol().equals('\u2654') && board.getBoard()[i][j].getColor().equals(color)) {
+
+                        for (int attackerX = 0; attackerX < 8; attackerX++) {
+                            for (int attackerY = 0; attackerY < 8; attackerY++) {
+                                // check if field is of opposite color
+                                if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE) || !board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
+                                    // check if attacking field isn't king
+                                    if (board.getBoard()[attackerY][attackerX].getSymbol().equals('\u2654') || board.getBoard()[attackerY][attackerX].getSymbol().equals('\u265A')) {
+                                        int[] from = new int[2];
+                                        int[] to = new int[2];
+
+                                        from[0] = attackerX;
+                                        from[1] = attackerY;
+                                        to[0] = i;
+                                        to[1] = j;
+
+
+                                        if (board.getBoard()[attackerY][attackerX].move(new int[][]{from, to}, board) != null) {
+                                            System.out.println("Check!");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        break;
+                    }
+                }
+            }
     }
 }

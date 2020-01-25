@@ -21,8 +21,11 @@ public class Knight extends Piece {
             // execute move
             board.getBoard()[yto][xto] = this;
             board.getBoard()[yfrom][xfrom] = new BlankSquare();
+
+            return board.getBoard();
         }
 
-        return board.getBoard();
+        // error
+        return null;
     }
 }
