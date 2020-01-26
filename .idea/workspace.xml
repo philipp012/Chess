@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81941cbb-683d-4c06-a7c0-ca74308f744f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Bishop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bishop.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +125,7 @@
       <workItem from="1579962598057" duration="1614000" />
       <workItem from="1580034020395" duration="1106000" />
       <workItem from="1580035158941" duration="52000" />
-      <workItem from="1580035247819" duration="301000" />
+      <workItem from="1580035247819" duration="675000" />
     </task>
     <servers />
   </component>
@@ -211,25 +213,25 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1870" height="543" key="GridCell.Tab.-1.right/0.25.1920.1055@0.25.1920.1055" timestamp="1580035130237" />
-    <state width="1870" height="710" key="GridCell.Tab.0.bottom" timestamp="1580035563699">
+    <state width="1870" height="710" key="GridCell.Tab.0.bottom" timestamp="1580035940142">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1870" height="710" key="GridCell.Tab.0.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1580035563699" />
+    <state width="1870" height="710" key="GridCell.Tab.0.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1580035940142" />
     <state width="2510" height="525" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746976" />
-    <state width="1870" height="710" key="GridCell.Tab.0.center" timestamp="1580035563697">
+    <state width="1870" height="710" key="GridCell.Tab.0.center" timestamp="1580035940141">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1870" height="710" key="GridCell.Tab.0.center/0.25.1920.1055@0.25.1920.1055" timestamp="1580035563697" />
+    <state width="1870" height="710" key="GridCell.Tab.0.center/0.25.1920.1055@0.25.1920.1055" timestamp="1580035940141" />
     <state width="2510" height="525" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746975" />
-    <state width="1870" height="710" key="GridCell.Tab.0.left" timestamp="1580035563696">
+    <state width="1870" height="710" key="GridCell.Tab.0.left" timestamp="1580035940140">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1870" height="710" key="GridCell.Tab.0.left/0.25.1920.1055@0.25.1920.1055" timestamp="1580035563696" />
+    <state width="1870" height="710" key="GridCell.Tab.0.left/0.25.1920.1055@0.25.1920.1055" timestamp="1580035940140" />
     <state width="2510" height="525" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746975" />
-    <state width="1870" height="710" key="GridCell.Tab.0.right" timestamp="1580035563698">
+    <state width="1870" height="710" key="GridCell.Tab.0.right" timestamp="1580035940142">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state width="1870" height="710" key="GridCell.Tab.0.right/0.25.1920.1055@0.25.1920.1055" timestamp="1580035563698" />
+    <state width="1870" height="710" key="GridCell.Tab.0.right/0.25.1920.1055@0.25.1920.1055" timestamp="1580035940142" />
     <state width="2510" height="525" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1577802746976" />
     <state width="1870" height="372" key="GridCell.Tab.1.bottom" timestamp="1580035369558">
       <screen x="0" y="25" width="1920" height="1055" />
