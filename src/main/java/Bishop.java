@@ -19,48 +19,48 @@ public class Bishop extends Piece {
         if (abs(xfrom - xto) == abs(yfrom - yto)) {
             // top left
             if (xto < xfrom && yto < yfrom) {
-                int xchecker = 1;
+                int xchecker = xfrom -1;
                 for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
-                    if (!board.getBoard()[i][xfrom - xchecker].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
+                        return board.getBoard();
+                    }
+                    xchecker--;
+                }
+            }
+            // top right
+            if (xto > xfrom && yto < yfrom) {
+                int xchecker = xfrom + 1;
+                for (int i = yfrom - 1; i > yto; i--) {
+                    // check if lane is free
+                    if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     xchecker++;
                 }
             }
 
-            // top right
-            else if (xto > xfrom && yto < yfrom) {
-                int counter = yfrom - 1;
-                while (counter > yto + 1) {
-                    // check if lane is free
-                    if (!board.getBoard()[counter][xfrom + 1].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
-                    }
-                    counter--;
-                }
-
-            }
             // bottom left
-            else if (xto < xfrom && yto > yfrom) {
-                int counter = yfrom + 1;
-                while (counter < yto - 1) {
+            if (xto < xfrom && yto > yfrom) {
+                int xchecker = xfrom - 1;
+                for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
-                    if (!board.getBoard()[counter][xfrom - 1].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
-                    counter++;
+                    xchecker--;
                 }
             }
+
             // bottom right
-            else if (xto > xfrom && yto > yfrom) {
-                int counter = yfrom + 1;
-                while (counter < yto - 1) {
+            if (xto > xfrom && yto > yfrom) {
+                int xchecker = xfrom + 1;
+                for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
-                    if (!board.getBoard()[counter][xfrom + 1].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
-                    counter++;
+                    xchecker++;
                 }
             }
 
