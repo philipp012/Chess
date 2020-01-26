@@ -1,5 +1,7 @@
 import Enums.COLOR;
 
+import java.util.Scanner;
+
 import static java.lang.Math.abs;
 
 public class Pawn extends Piece {

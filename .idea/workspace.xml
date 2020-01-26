@@ -4,7 +4,7 @@
     <list default="true" id="81941cbb-683d-4c06-a7c0-ca74308f744f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pawn.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <workItem from="1580034020395" duration="1106000" />
       <workItem from="1580035158941" duration="52000" />
       <workItem from="1580035247819" duration="2010000" />
-      <workItem from="1580041621466" duration="4104000" />
+      <workItem from="1580041621466" duration="5809000" />
     </task>
     <servers />
   </component>
@@ -214,26 +214,26 @@
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state width="1870" height="543" key="GridCell.Tab.-1.right/0.25.1920.1055@0.25.1920.1055" timestamp="1580035130237" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.bottom" timestamp="1580045994327">
+    <state width="2510" height="1024" key="GridCell.Tab.0.bottom" timestamp="1580054265441">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1870" height="631" key="GridCell.Tab.0.bottom/0.25.1920.1055@0.25.1920.1055" timestamp="1580036585334" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1580045994327" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.center" timestamp="1580045994326">
+    <state width="2510" height="1024" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1580054265441" />
+    <state width="2510" height="1024" key="GridCell.Tab.0.center" timestamp="1580054265440">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1870" height="631" key="GridCell.Tab.0.center/0.25.1920.1055@0.25.1920.1055" timestamp="1580036585332" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1580045994326" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.left" timestamp="1580045994325">
+    <state width="2510" height="1024" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1580054265440" />
+    <state width="2510" height="1024" key="GridCell.Tab.0.left" timestamp="1580054265439">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1870" height="631" key="GridCell.Tab.0.left/0.25.1920.1055@0.25.1920.1055" timestamp="1580036585332" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1580045994325" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.right" timestamp="1580045994327">
+    <state width="2510" height="1024" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1580054265439" />
+    <state width="2510" height="1024" key="GridCell.Tab.0.right" timestamp="1580054265440">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state width="1870" height="631" key="GridCell.Tab.0.right/0.25.1920.1055@0.25.1920.1055" timestamp="1580036585333" />
-    <state width="2510" height="1024" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1580045994327" />
+    <state width="2510" height="1024" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1580054265440" />
     <state width="2510" height="384" key="GridCell.Tab.1.bottom" timestamp="1580045906658">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -273,17 +273,6 @@
     </state>
     <state x="707" y="265" width="672" height="506" key="search.everywhere.popup/0.25.1920.1055@0.25.1920.1055" timestamp="1580034054562" />
     <state x="943" y="347" width="672" height="678" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1577692502820" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Queen.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Chess$Main.ic" NAME="Main Coverage Results" MODIFIED="1577695073723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

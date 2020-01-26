@@ -50,7 +50,24 @@ public class Main {
                                 board.setBoard(backUpBoard);
                                 System.out.println("You would be in check!");
                             } else {
-
+                                // pawn promotion
+                                if (board.getBoard()[yto][xto].getSymbol().equals("\u2659") && yto == 0) {
+                                    System.out.print("Pawn Promotion: ");
+                                    String input = player1.getInput();
+                                    switch (input.toLowerCase().charAt(0)) {
+                                        case 'r':
+                                            board.getBoard()[yto][xto] = new Rook(COLOR.WHITE, "\u265C");
+                                            break;
+                                        case 'k':
+                                            board.getBoard()[yto][xto] = new Knight(COLOR.WHITE, "\u265E");
+                                            break;
+                                        case 'b':
+                                            board.getBoard()[yto][xto] = new Bishop(COLOR.WHITE, "\u265D");
+                                            break;
+                                        default:
+                                            board.getBoard()[yto][xto] = new Queen(COLOR.WHITE, "\u265B");
+                                    }
+                                }
                                 moves++;
                                 break;
                             }
@@ -91,6 +108,24 @@ public class Main {
                                 board.setBoard(backUpBoard);
                                 System.out.println("You would be in check!");
                             } else {
+                                // pawn promotion
+                                if (board.getBoard()[yto][xto].getSymbol().equals("\u2659") && yto == 7) {
+                                    System.out.print("Pawn Promotion: ");
+                                    String input = player2.getInput();
+                                    switch (input.toLowerCase().charAt(0)) {
+                                        case 'r':
+                                            board.getBoard()[yto][xto] = new Rook(COLOR.BLACK, "\u2656");
+                                            break;
+                                        case 'k':
+                                            board.getBoard()[yto][xto] = new Knight(COLOR.BLACK, "\u2658");
+                                            break;
+                                        case 'b':
+                                            board.getBoard()[yto][xto] = new Bishop(COLOR.BLACK, "\u2657");
+                                            break;
+                                        default:
+                                            board.getBoard()[yto][xto] = new Queen(COLOR.BLACK, "\u2655");
+                                    }
+                                }
 
                                 moves++;
                                 break;
