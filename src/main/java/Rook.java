@@ -7,68 +7,60 @@ public class Rook extends Piece {
     }
 
     @Override
-    public Piece[][] move(int[][] move, Board board) {
+    public boolean checkMove(int[][] move, Board board) {
         int xfrom = move[0][0];
         int yfrom = move[0][1];
         int xto = move[1][0];
         int yto = move[1][1];
 
         // vertical
-        if (xfrom == xto && yfrom != yto) {
-            int counter = yfrom;
+        if (xfrom == xto) {
             // up
             if (yfrom > yto) {
-                counter--;
-                while (counter > yto + 1) {
-                    // check if field is free
-                    if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                for (int i = yfrom - 1; i > yto; i--) {
+                    // check if lane is free
+                    if (!board.getBoard()[i][xto].getColor().equals(COLOR.NONE)) {
+                        return false;
                     }
-                    counter--;
                 }
+                return true;
             }
             // down
             else {
-                counter++;
-                while (counter < yto - 1) {
-                    // check if field is free
-                    if (!board.getBoard()[counter][xfrom].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                for (int i = yfrom + 1; i < yto; i++) {
+                    // check if lane is free
+                    if (!board.getBoard()[i][xto].getColor().equals(COLOR.NONE)) {
+                        return false;
                     }
-                    counter++;
                 }
+                return true;
             }
         }
         // horizontal
-        else if (yfrom == yto && xfrom != xto) {
-            int counter = xfrom;
+        else if (yfrom == yto) {
             //right
             if (xfrom < xto) {
-                counter++;
-                while (counter < xto - 1) {
-                    // check if field is free
-                    if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                for (int i = xfrom + 1; i < xto; i++) {
+                    // check if lane is free
+                    if (!board.getBoard()[yto][i].getColor().equals(COLOR.NONE)) {
+                        return false;
                     }
-                    counter++;
                 }
+                return true;
             }
             // left
             else {
-                counter--;
-                while (counter > xto + 1) {
-                    // check if field is free
-                    if (!board.getBoard()[yfrom][counter].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                for (int i = xfrom - 1; i > xto; i--) {
+                    // check if lane is free
+                    if (!board.getBoard()[yto][i].getColor().equals(COLOR.NONE)) {
+                        return false;
                     }
-                    counter--;
                 }
+                return true;
             }
         }
 
         // execute move
-        board.getBoard()[yto][xto] = this;
-        board.getBoard()[yfrom][xfrom] = new BlankSquare();
-        return board.getBoard();
+        return false;
     }
 }

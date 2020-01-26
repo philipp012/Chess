@@ -40,20 +40,27 @@ public class Main {
                 // check if from field is white and to field isn't
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
-                        if (board.getBoard() != board.getBoard()[yfrom][xfrom].move(move, board) && board.getBoard()[yfrom][xfrom].move(move, board) != null) {
-                            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                            // set move
+                            board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
+                            board.getBoard()[yfrom][xfrom] = new BlankSquare();
+
                             moves++;
                             break;
                         } else {
                             System.out.println("invalid move");
                         }
+                    } else {
+                        System.out.println("invalid move");
                     }
+                } else {
+                    System.out.println("invalid move");
                 }
             }
 
-            checkCheck(COLOR.BLACK, board);
+            // checkCheck(COLOR.BLACK, board);
 
-            System.out.println("Moves: " + moves);
+            /*System.out.println("Moves: " + moves);
             board.printBoard();
 
 
@@ -67,18 +74,28 @@ public class Main {
                 // check if from field is white and to field isn't
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
-                        if (board.getBoard() != board.getBoard()[yfrom][xfrom].move(move, board) && board.getBoard()[yfrom][xfrom].move(move, board) != null) {
-                            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                            // set move
+                            board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
+                            board.getBoard()[yfrom][xfrom] = new BlankSquare();
                             moves++;
                             break;
                         } else {
                             System.out.println("invalid move");
                         }
+                    } else {
+                        System.out.println("invalid move");
                     }
+                } else {
+                    System.out.println("invalid move");
                 }
-
-                System.out.println("Moves: " + moves);
             }
+
+            // checkCheck(COLOR.WHITE, board);
+
+            System.out.println("Moves: " + moves);
+
+             */
         }
     }
 
@@ -88,22 +105,22 @@ public class Main {
                 // check if field contains king-object of the targeted color
                 if (board.getBoard()[i][j].getSymbol().equals("\u265A") | board.getBoard()[i][j].getSymbol().equals("\u2654") && board.getBoard()[i][j].getColor().equals(color)) {
 
-                    for (int attackerX = 0; attackerX < 8; attackerX++) {
-                        for (int attackerY = 0; attackerY < 8; attackerY++) {
+                    for (int attackerY = 0; attackerY < 8; attackerY++) {
+                        for (int attackerX = 0; attackerX < 8; attackerX++) {
                             // check if field is of opposite color
                             if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE) || !board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
                                 // check if attacking field isn't king
-                                if (board.getBoard()[attackerY][attackerX].getSymbol().equals("\u2654") || board.getBoard()[attackerY][attackerX].getSymbol().equals("\u265A")) {
+                                if (!board.getBoard()[attackerY][attackerX].getSymbol().equals("\u2654") && !board.getBoard()[attackerY][attackerX].getSymbol().equals("\u265A")) {
                                     int[] from = new int[2];
                                     int[] to = new int[2];
 
                                     from[0] = attackerX;
                                     from[1] = attackerY;
-                                    to[0] = i;
-                                    to[1] = j;
+                                    to[0] = j;
+                                    to[1] = i;
 
 
-                                    if (board.getBoard()[attackerY][attackerX].move(new int[][]{from, to}, board) != null) {
+                                    if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board)) {
                                         System.out.println("Check!");
                                     }
                                 }

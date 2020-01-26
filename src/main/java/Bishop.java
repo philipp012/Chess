@@ -1,6 +1,7 @@
 import Enums.COLOR;
 
 import static java.lang.Math.abs;
+import static java.lang.Math.toRadians;
 
 public class Bishop extends Piece {
     public Bishop(COLOR color, String symbol) {
@@ -9,7 +10,7 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public Piece[][] move(int[][] move, Board board) {
+    public boolean checkMove(int[][] move, Board board) {
         int xfrom = move[0][0];
         int yfrom = move[0][1];
         int xto = move[1][0];
@@ -19,11 +20,11 @@ public class Bishop extends Piece {
         if (abs(xfrom - xto) == abs(yfrom - yto)) {
             // top left
             if (xto < xfrom && yto < yfrom) {
-                int xchecker = xfrom -1;
+                int xchecker = xfrom - 1;
                 for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return false;
                     }
                     xchecker--;
                 }
@@ -34,7 +35,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return false;
                     }
                     xchecker++;
                 }
@@ -46,7 +47,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return false;
                     }
                     xchecker--;
                 }
@@ -58,16 +59,16 @@ public class Bishop extends Piece {
                 for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return board.getBoard();
+                        return false;
                     }
                     xchecker++;
                 }
             }
 
+
             // execute move
-            board.getBoard()[yto][xto] = this;
-            board.getBoard()[yfrom][xfrom] = new BlankSquare();
+            return true;
         }
-        return board.getBoard();
+        return false;
     }
 }

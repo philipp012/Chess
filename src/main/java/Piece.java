@@ -20,7 +20,7 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public Piece[][] move(int[][] move, Board board) {
-        return null;
+    public boolean checkMove(int[][] move, Board board) {
+        return false;
     }
 }
