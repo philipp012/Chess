@@ -27,37 +27,21 @@ public class Main {
         while (true) {
             board.printBoard();
             // Whites turn
-            move =  player1.getMove();
+            move = player1.getMove();
             xfrom = move[0][0];
             yfrom = move[0][1];
             xto = move[1][0];
             yto = move[1][1];
-            boolean checker = false;
-            
 
-            while (!checker) {
-                // check if from field is white and to field isn't
-                if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
-                    if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
-                        if (board.getBoard() == board.getBoard()[yfrom][xfrom].move(move, board)) {
-                            checker = true;
-
-                        } else {
-                            System.out.println("invalid move");
-
-                            move =  player1.getMove();
-                            xfrom = move[0][0];
-                            yfrom = move[0][1];
-                            xto = move[1][0];
-                            yto = move[1][1];
-                        }
-                    }
+            // check if from field is white and to field isn't
+            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
+                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
+                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+                    moves++;
                 }
             }
-            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
-            moves++;
 
-            checkCheck(COLOR.BLACK, board);
+            // checkCheck(COLOR.BLACK, board);
 
             System.out.println("Moves: " + moves);
             board.printBoard();
@@ -69,36 +53,18 @@ public class Main {
             yfrom = move[0][1];
             xto = move[1][0];
             yto = move[1][1];
+            // check if from field is white and to field isn't
+            if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
+                if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
 
-            checker = false;
-
-
-            while (!checker) {
-                // check if from field is white and to field isn't
-                if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
-                    if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
-                        if (board.getBoard() == board.getBoard()[yfrom][xfrom].move(move, board)) {
-                            checker = true;
-
-                        } else {
-                            System.out.println("invalid move");
-
-                            move =  player2.getMove();
-                            xfrom = move[0][0];
-                            yfrom = move[0][1];
-                            xto = move[1][0];
-                            yto = move[1][1];
-                        }
-                    }
+                    board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
+                    moves++;
+                    System.out.println("Moves: " + moves);
                 }
             }
-            board.setBoard(board.getBoard()[yfrom][xfrom].move(move, board));
-            moves++;
-            System.out.println("Moves: " + moves);
         }
-    }
 
-    private static void checkCheck(COLOR color, Board board) {
+        /*private static void checkCheck(COLOR color, Board board){
             for (int i = 0; i < 8; i++) {
                 for (int j = 0; j < 8; j++) {
                     // check if field contains king-object of the targeted color
@@ -130,6 +96,6 @@ public class Main {
                         break;
                     }
                 }
-            }
+            }*/
+        }
     }
-}

@@ -19,13 +19,13 @@ public class Bishop extends Piece {
         if (abs(xfrom - xto) == abs(yfrom - yto)) {
             // top left
             if (xto < xfrom && yto < yfrom) {
-                int counter = yfrom - 1;
-                while (counter > yto + 1) {
+                int xchecker = 1;
+                for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
-                    if (!board.getBoard()[xfrom - 1][counter].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[i][xfrom - xchecker].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
-                    counter--;
+                    xchecker++;
                 }
             }
 
@@ -34,7 +34,7 @@ public class Bishop extends Piece {
                 int counter = yfrom - 1;
                 while (counter > yto + 1) {
                     // check if lane is free
-                    if (!board.getBoard()[xfrom + 1][counter].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[counter][xfrom + 1].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter--;
@@ -46,7 +46,7 @@ public class Bishop extends Piece {
                 int counter = yfrom + 1;
                 while (counter < yto - 1) {
                     // check if lane is free
-                    if (!board.getBoard()[xfrom - 1][counter].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[counter][xfrom - 1].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter++;
@@ -57,7 +57,7 @@ public class Bishop extends Piece {
                 int counter = yfrom + 1;
                 while (counter < yto - 1) {
                     // check if lane is free
-                    if (!board.getBoard()[xfrom + 1][counter].getColor().equals(COLOR.NONE)) {
+                    if (!board.getBoard()[counter][xfrom + 1].getColor().equals(COLOR.NONE)) {
                         return board.getBoard();
                     }
                     counter++;

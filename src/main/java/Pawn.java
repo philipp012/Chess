@@ -49,7 +49,7 @@ public class Pawn extends Piece {
             }
 
             // beating
-            if (!board.getBoard()[yto][xto].getColor().equals(this.getColor()) && board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
+            if (!board.getBoard()[yto][xto].getColor().equals(this.getColor()) && !board.getBoard()[yto][xto].getColor().equals(COLOR.NONE)) {
                 board.getBoard()[yto][xto] = this;
                 board.getBoard()[yfrom][xfrom] = new BlankSquare();
                 return board.getBoard();
