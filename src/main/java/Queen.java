@@ -74,6 +74,7 @@ public class Queen extends Piece {
                     }
                     xchecker--;
                 }
+                return true;
             }
             // top right
             if (xto > xfrom && yto < yfrom) {
@@ -85,6 +86,7 @@ public class Queen extends Piece {
                     }
                     xchecker++;
                 }
+                return true;
             }
 
             // bottom left
@@ -97,6 +99,7 @@ public class Queen extends Piece {
                     }
                     xchecker--;
                 }
+                return true;
             }
 
             // bottom right
@@ -109,6 +112,7 @@ public class Queen extends Piece {
                     }
                     xchecker++;
                 }
+                return true;
             }
         }
         return false;

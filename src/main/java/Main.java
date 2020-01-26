@@ -41,12 +41,19 @@ public class Main {
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
                         if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                            Piece[][] backUpBoard = board.getBoard();
                             // set move
                             board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
                             board.getBoard()[yfrom][xfrom] = new BlankSquare();
 
-                            moves++;
-                            break;
+                            if (checkCheck(COLOR.WHITE, board)) {
+                                board.setBoard(backUpBoard);
+                                System.out.println("You would be in check!");
+                            } else {
+
+                                moves++;
+                                break;
+                            }
                         } else {
                             System.out.println("invalid move");
                         }
@@ -58,9 +65,9 @@ public class Main {
                 }
             }
 
-            // checkCheck(COLOR.BLACK, board);
+            checkCheck(COLOR.BLACK, board);
 
-            /*System.out.println("Moves: " + moves);
+            System.out.println("Moves: " + moves);
             board.printBoard();
 
 
@@ -75,11 +82,19 @@ public class Main {
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
                         if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                            Piece[][] backUpBoard = board.getBoard();
+
                             // set move
                             board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
                             board.getBoard()[yfrom][xfrom] = new BlankSquare();
-                            moves++;
-                            break;
+                            if (checkCheck(COLOR.BLACK, board)) {
+                                board.setBoard(backUpBoard);
+                                System.out.println("You would be in check!");
+                            } else {
+
+                                moves++;
+                                break;
+                            }
                         } else {
                             System.out.println("invalid move");
                         }
@@ -91,15 +106,13 @@ public class Main {
                 }
             }
 
-            // checkCheck(COLOR.WHITE, board);
+            checkCheck(COLOR.WHITE, board);
 
             System.out.println("Moves: " + moves);
-
-             */
         }
     }
 
-    private static void checkCheck(COLOR color, Board board) {
+    private static boolean checkCheck(COLOR color, Board board) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 // check if field contains king-object of the targeted color
@@ -108,7 +121,7 @@ public class Main {
                     for (int attackerY = 0; attackerY < 8; attackerY++) {
                         for (int attackerX = 0; attackerX < 8; attackerX++) {
                             // check if field is of opposite color
-                            if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE) || !board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
+                            if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE) && !board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
                                 // check if attacking field isn't king
                                 if (!board.getBoard()[attackerY][attackerX].getSymbol().equals("\u2654") && !board.getBoard()[attackerY][attackerX].getSymbol().equals("\u265A")) {
                                     int[] from = new int[2];
@@ -122,15 +135,15 @@ public class Main {
 
                                     if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board)) {
                                         System.out.println("Check!");
+                                        return true;
                                     }
                                 }
                             }
                         }
                     }
-
-                    break;
                 }
             }
         }
+        return false;
     }
 }
