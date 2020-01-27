@@ -22,7 +22,11 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public boolean checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
-        return false;
+    public MoveResponse checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
+        MoveResponse moveResponse = new MoveResponse();
+        moveResponse.setValid(false);
+        moveResponse.setCastlingKing(false);
+        moveResponse.setEnPassant(false);
+        return moveResponse;
     }
 }

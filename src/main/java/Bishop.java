@@ -3,7 +3,6 @@ import Enums.COLOR;
 import java.util.List;
 
 import static java.lang.Math.abs;
-import static java.lang.Math.toRadians;
 
 public class Bishop extends Piece {
     public Bishop(COLOR color, String symbol) {
@@ -12,11 +11,18 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public boolean checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
+    public MoveResponse checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
         int xfrom = move[0][0];
         int yfrom = move[0][1];
         int xto = move[1][0];
         int yto = move[1][1];
+
+
+        MoveResponse moveResponse = new MoveResponse();
+        moveResponse.setEnPassant(false);
+        moveResponse.setCastlingKing(false);
+        moveResponse.setValid(false);
+
 
         // check if move is valid
         if (abs(xfrom - xto) == abs(yfrom - yto)) {
@@ -26,7 +32,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return false;
+                        return moveResponse;
                     }
                     xchecker--;
                 }
@@ -37,7 +43,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom - 1; i > yto; i--) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return false;
+                        return moveResponse;
                     }
                     xchecker++;
                 }
@@ -49,7 +55,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return false;
+                        return moveResponse;
                     }
                     xchecker--;
                 }
@@ -61,7 +67,7 @@ public class Bishop extends Piece {
                 for (int i = yfrom + 1; i < yto; i++) {
                     // check if lane is free
                     if (!board.getBoard()[i][xchecker].getColor().equals(COLOR.NONE)) {
-                        return false;
+                        return moveResponse;
                     }
                     xchecker++;
                 }
@@ -69,8 +75,9 @@ public class Bishop extends Piece {
 
 
             // execute move
-            return true;
+            moveResponse.setValid(true);
+            return moveResponse;
         }
-        return false;
+        return moveResponse;
     }
 }
