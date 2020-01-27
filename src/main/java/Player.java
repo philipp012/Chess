@@ -34,7 +34,11 @@ public class Player {
         while (!valid) {
             System.out.print(this.color + "'s turn: ");
             String input = getInput().toUpperCase();
-            if (checkInputValidity(input)) {
+            if (input.toLowerCase().charAt(0) == 'h') {
+                System.out.println("Move: example = A1:A2 explanation = [LETTER][NUMBER]:[LETTER][NUMBER] (from:to)\nHelp: h\n");
+            }
+
+            else if (checkInputValidity(input)) {
                 valid = true;
                 for (int i = 0; i < LETTERS.length; i++) {
                     if (LETTERS[i] == input.charAt(0)) {

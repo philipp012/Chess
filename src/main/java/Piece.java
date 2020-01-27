@@ -1,5 +1,7 @@
 import Enums.COLOR;
 
+import java.util.List;
+
 public abstract class Piece {
     private COLOR color;
     private String symbol;
@@ -20,7 +22,7 @@ public abstract class Piece {
         this.color = color;
     }
 
-    public boolean checkMove(int[][] move, Board board) {
+    public boolean checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
         return false;
     }
 }

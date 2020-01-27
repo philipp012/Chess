@@ -1,5 +1,8 @@
 import Enums.COLOR;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,6 +17,8 @@ public class Main {
         Player player2 = new Player();
         player1.setColor(COLOR.WHITE);
         player2.setColor(COLOR.BLACK);
+
+        List<int[][]> moveTracker = new ArrayList<int[][]>();
 
         Board board = new Board();
         board.setUp();
@@ -40,13 +45,13 @@ public class Main {
                 // check if from field is white and to field isn't
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.WHITE)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.WHITE)) {
-                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board, moveTracker)) {
                             Piece[][] backUpBoard = board.getBoard();
                             // set move
                             board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
                             board.getBoard()[yfrom][xfrom] = new BlankSquare();
 
-                            if (checkCheck(COLOR.WHITE, board)) {
+                            if (checkCheck(COLOR.WHITE, board, moveTracker)) {
                                 board.setBoard(backUpBoard);
                                 System.out.println("You would be in check!");
                             } else {
@@ -68,6 +73,9 @@ public class Main {
                                             board.getBoard()[yto][xto] = new Queen(COLOR.WHITE, "\u265B");
                                     }
                                 }
+
+                                moveTracker.add(move);
+
                                 moves++;
                                 break;
                             }
@@ -82,7 +90,7 @@ public class Main {
                 }
             }
 
-            checkCheck(COLOR.BLACK, board);
+            checkCheck(COLOR.BLACK, board, moveTracker);
 
             System.out.println("Moves: " + moves);
             board.printBoard();
@@ -98,13 +106,13 @@ public class Main {
                 // check if from field is white and to field isn't
                 if (board.getBoard()[yfrom][xfrom].getColor().equals(COLOR.BLACK)) {
                     if (!board.getBoard()[yto][xto].getColor().equals(COLOR.BLACK)) {
-                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board)) {
+                        if (board.getBoard()[yfrom][xfrom].checkMove(move, board, moveTracker)) {
                             Piece[][] backUpBoard = board.getBoard();
 
                             // set move
                             board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
                             board.getBoard()[yfrom][xfrom] = new BlankSquare();
-                            if (checkCheck(COLOR.BLACK, board)) {
+                            if (checkCheck(COLOR.BLACK, board, moveTracker)) {
                                 board.setBoard(backUpBoard);
                                 System.out.println("You would be in check!");
                             } else {
@@ -127,6 +135,8 @@ public class Main {
                                     }
                                 }
 
+                                moveTracker.add(move);
+
                                 moves++;
                                 break;
                             }
@@ -141,13 +151,13 @@ public class Main {
                 }
             }
 
-            checkCheck(COLOR.WHITE, board);
+            checkCheck(COLOR.WHITE, board, moveTracker);
 
             System.out.println("Moves: " + moves);
         }
     }
 
-    private static boolean checkCheck(COLOR color, Board board) {
+    private static boolean checkCheck(COLOR color, Board board, List<int[][]> moveTracker) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 // check if field contains king-object of the targeted color
@@ -168,7 +178,7 @@ public class Main {
                                     to[1] = i;
 
 
-                                    if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board)) {
+                                    if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board, moveTracker)) {
                                         System.out.println("Check!");
                                         return true;
                                     }

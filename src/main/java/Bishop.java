@@ -1,5 +1,7 @@
 import Enums.COLOR;
 
+import java.util.List;
+
 import static java.lang.Math.abs;
 import static java.lang.Math.toRadians;
 
@@ -10,7 +12,7 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public boolean checkMove(int[][] move, Board board) {
+    public boolean checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
         int xfrom = move[0][0];
         int yfrom = move[0][1];
         int xto = move[1][0];

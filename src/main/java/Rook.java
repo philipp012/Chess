@@ -1,5 +1,7 @@
 import Enums.COLOR;
 
+import java.util.List;
+
 public class Rook extends Piece {
     public Rook(COLOR color, String symbol) {
         this.setSymbol(symbol);
@@ -7,7 +9,7 @@ public class Rook extends Piece {
     }
 
     @Override
-    public boolean checkMove(int[][] move, Board board) {
+    public boolean checkMove(int[][] move, Board board, List<int[][]> moveTracker) {
         int xfrom = move[0][0];
         int yfrom = move[0][1];
         int xto = move[1][0];
