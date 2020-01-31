@@ -72,38 +72,6 @@ class Board {
         System.out.print("\n\n");
     }
 
-    public void printBoardReversed() {
-        System.out.print("\n   ");
-        for (int i = LETTERS.length -1; i > -1; i--){
-            System.out.print("\u2001\u2001" + LETTERS[i] + "\u2009\u2009\u2001");
-
-        }
-        System.out.print("\n   ");
-        for(int i = 0; i < 8; i++){
-            System.out.print("-------");
-        }
-        System.out.print("\n");
-        int counter = 1;
-        for(int i = 8; i != 0; i--){
-            System.out.print("  " + (counter) + " |");
-            for(Piece j : board[i - 1]){
-                System.out.print(" " + j.getSymbol() + "  | ");
-            }
-            System.out.print("" + (counter));
-            System.out.print("\n   ");
-            for(int j = 0; j < 8; j++){
-                System.out.print("-------");
-            }
-            System.out.print("\n");
-            counter++;
-        }
-        System.out.print("   ");
-        for (int i = LETTERS.length -1; i > -1; i--){
-            System.out.print("\u2001\u2001" + LETTERS[i] + "\u2009\u2009\u2001");
-        }
-        System.out.print("\n\n");
-    }
-
     public Piece[][] getBoard() {
         return board;
     }

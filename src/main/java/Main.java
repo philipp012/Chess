@@ -1,5 +1,6 @@
 import Enums.COLOR;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -52,11 +53,11 @@ public class Main {
                             if (moveResponse.isEnPassant()) {
                                 board.getBoard()[yto + 1][xto] = new BlankSquare();
                             } else if (moveResponse.isCastlingKing()) {
-                                board.getBoard()[yto][xto-1] = new Rook(COLOR.WHITE, "\u265C");
-                                board.getBoard()[yto][xto+1] = new BlankSquare();
+                                board.getBoard()[yto][xto - 1] = new Rook(COLOR.WHITE, "\u265C");
+                                board.getBoard()[yto][xto + 1] = new BlankSquare();
                             } else if (moveResponse.isCastlingQueen()) {
-                                board.getBoard()[yto][xto+1] = new Rook(COLOR.WHITE, "\u265C");
-                                board.getBoard()[yto][xto-2] = new BlankSquare();
+                                board.getBoard()[yto][xto + 1] = new Rook(COLOR.WHITE, "\u265C");
+                                board.getBoard()[yto][xto - 2] = new BlankSquare();
                             }
 
                             // set move
@@ -128,11 +129,11 @@ public class Main {
                             if (moveResponse.isEnPassant()) {
                                 board.getBoard()[yto - 1][xto] = new BlankSquare();
                             } else if (moveResponse.isCastlingKing()) {
-                                board.getBoard()[yto][xto-1] = new Rook(COLOR.BLACK, "\u2656");
-                                board.getBoard()[yto][xto+1] = new BlankSquare();
+                                board.getBoard()[yto][xto - 1] = new Rook(COLOR.BLACK, "\u2656");
+                                board.getBoard()[yto][xto + 1] = new BlankSquare();
                             } else if (moveResponse.isCastlingQueen()) {
-                                board.getBoard()[yto][xto+1] = new Rook(COLOR.BLACK, "\u2656");
-                                board.getBoard()[yto][xto-2] = new BlankSquare();
+                                board.getBoard()[yto][xto + 1] = new Rook(COLOR.BLACK, "\u2656");
+                                board.getBoard()[yto][xto - 2] = new BlankSquare();
                             }
                             // set move
                             board.getBoard()[yto][xto] = board.getBoard()[yfrom][xfrom];
@@ -188,32 +189,33 @@ public class Main {
         for (int kingY = 0; kingY < 8; kingY++) {
             for (int kingX = 0; kingX < 8; kingX++) {
                 // check if field contains king-object of the targeted color
-                if (board.getBoard()[kingY][kingX].getSymbol().equals("\u265A") || board.getBoard()[kingY][kingX].getSymbol().equals("\u2654") && board.getBoard()[kingY][kingX].getColor().equals(color)) {
+                if (board.getBoard()[kingY][kingX].getColor().equals(color)) {
+                    if (board.getBoard()[kingY][kingX].getSymbol().equals("\u265A") || board.getBoard()[kingY][kingX].getSymbol().equals("\u2654")) {
 
-                    for (int attackerY = 0; attackerY < 8; attackerY++) {
-                        for (int attackerX = 0; attackerX < 8; attackerX++) {
-                            // check if field is of opposite color
-                            if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE)) {
-                                if (!board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
-                                    // check if attacking field isn't king
-                                    if (!board.getBoard()[attackerY][attackerX].getSymbol().equals("\u2654") && !board.getBoard()[attackerY][attackerX].getSymbol().equals("\u265A")) {
-                                        int[] from = new int[2];
-                                        int[] to = new int[2];
+                        for (int attackerY = 0; attackerY < 8; attackerY++) {
+                            for (int attackerX = 0; attackerX < 8; attackerX++) {
+                                // check if field is of opposite color
+                                if (!board.getBoard()[attackerY][attackerX].getColor().equals(COLOR.NONE)) {
+                                    if (!board.getBoard()[attackerY][attackerX].getColor().equals(color)) {
+                                        // check if attacking field isn't king
+                                        if (!board.getBoard()[attackerY][attackerX].getSymbol().equals("\u2654") && !board.getBoard()[attackerY][attackerX].getSymbol().equals("\u265A")) {
+                                            int[] from = new int[2];
+                                            int[] to = new int[2];
 
-                                        from[0] = attackerX;
-                                        from[1] = attackerY;
-                                        to[0] = kingX;
-                                        to[1] = kingY;
+                                            from[0] = attackerX;
+                                            from[1] = attackerY;
+                                            to[0] = kingX;
+                                            to[1] = kingY;
 
 
-                                        if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board, moveTracker).isValid()) {
-                                            return true;
+                                            if (board.getBoard()[attackerY][attackerX].checkMove(new int[][]{from, to}, board, moveTracker).isValid()) {
+                                                return true;
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
-                        break;
                     }
                 }
             }
